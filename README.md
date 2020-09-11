@@ -1,11 +1,10 @@
 Team-17-Azubi-Africa-Hackathon
 # DOCUMENTATION ON DR CONGO FIRES
 Main aim of our predictive module is to find the percentage area that will get burnt in case of a fire outbreak. This project is solely about using some specific and environmental indicators to predict the percentage of an area that will get burnt in the case of a fire outbreak. The various steps we used are elaborated more in the Team-17-Report.docx which is the main report. The various processes used in the .ipynb file is commented to give an overview of all that was involved in the process. The main process used in the .ipynb file are: 
-1. Understanding The Data
+1. Understanding The Data And Cleaning
 2. Feature Engineering And Vizualizations
-3. Cleaning The Data
-4. Azure
-## Understanding The Data
+3. Azure
+## Understanding The Data And Cleaning
 The whole idea of this process is to get an overview of the data and all that it entails. This was done uses various python libraries such as Pandas, Numpy, MissingNo, and many others. The various methods used in this particular broad process includes the following:
 1. Imported the need libraries which are;  numpy as np, pandas as pd, collections, matplotlib.pyplot as plt, missingno as msno, and scipy.stats as st. 
 2. Read the data with the read_csv method of pandas which loaded the csv file of our train dataset into a Pandas Dataframe and stored it in the variable train.
@@ -60,7 +59,13 @@ Feature engineering helps the predictive model to predict better. It seeks to es
 10. Called the shape method on train to see the new number of rows and columns
 11. Called the shape method on test to see the new number of rows and columns
 12. Showed the total counts for each year in train dataset in ascending order.
-13. 
+13. Checked actual fires of the feature engineered train by running the loc function and setting burnt to be greater than 0
+14. Run the shape function on actual fires to see the dimenstionality
+15. Visualized a horizontal graph of the actual fires in each year in ascending order by running value_counts().sort_values().plot() function on it.
+16. Run value_counts().sort_values() on the year column of the actual fires data to see how much that occur in each year.
+17. Visualized a bar graph of the total counts of the train month column in ascending order by running value_counts().sort_values().plot() function on it.
+18. Combined the test and train dataset by and gave each row from each dataset a unique indentifier. 0 for train and 1 for test in a column called separator. 
+19. 
 
 
 
