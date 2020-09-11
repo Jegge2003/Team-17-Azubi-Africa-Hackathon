@@ -65,8 +65,16 @@ Feature engineering helps the predictive model to predict better. It seeks to es
 16. Run value_counts().sort_values() on the year column of the actual fires data to see how much that occur in each year.
 17. Visualized a bar graph of the total counts of the train month column in ascending order by running value_counts().sort_values().plot() function on it.
 18. Combined the test and train dataset by and gave each row from each dataset a unique indentifier. 0 for train and 1 for test in a column called separator. 
-19. 
+19. Called the loc function on train data to find the total number of rows were climate_swe was 0. 
+20. Showed the first 5 rows by calling the head method on the Pandas Dataframe we named train. 
+21. Called the drop function to now drop the separator column added to the feature engineered dataset
+22. Created a CSV file called new_train using the feature engineered train dataset. This dataset was sent to Azure for further analysis. 
+23. Run the describe method on all the distinct values of the year column of the train set for further analysis
+24. Created a CSV file called new_test using the feature engineered test dataset. This dataset was sent to Azure for further analysis and inferencing
 
+## Azure
+1. The new_train data was sent to Microsoft Azure to be used to train the Decision Forest Regression Model.
+2. The new_test was used inferencing after the pipeline of the model was deploy. 
 
 
 
