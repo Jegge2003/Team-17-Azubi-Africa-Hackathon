@@ -1,10 +1,9 @@
 Team-17-Azubi-Africa-Hackathon
-# DOCUMENTATION
-This project is solely about using some specific and environmental indicators to predict the percentage of an area that will get burnt in the case of a fire outbreak.
-The various steps we used are elaborated more in the Team-17-Report.docx which is the main report. The various processes used in the .ipynb file is commented to give an overview of all that was involved in the process. The main process used in the .ipynb file are: 
+# DOCUMENTATION ON DR CONGO FIRES
+Main aim of our predictive module is to find the percentage area that will get burnt in case of a fire outbreak. This project is solely about using some specific and environmental indicators to predict the percentage of an area that will get burnt in the case of a fire outbreak. The various steps we used are elaborated more in the Team-17-Report.docx which is the main report. The various processes used in the .ipynb file is commented to give an overview of all that was involved in the process. The main process used in the .ipynb file are: 
 1. Understanding The Data
-2. Cleaning The Data
-3. Featurization
+2. Feature Engineering And Vizualizations
+3. Cleaning The Data
 4. Azure
 ## Understanding The Data
 The whole idea of this process is to get an overview of the data and all that it entails. This was done uses various python libraries such as Pandas, Numpy, MissingNo, and many others. The various methods used in this particular broad process includes the following:
@@ -40,10 +39,28 @@ The whole idea of this process is to get an overview of the data and all that it
 30. Showed the last 5 rows by calling the head method on train dataset.
 31. Showed the first 5 rows by calling the head method on test dataset.
 32. Showed the first 5 rows by calling the head method on test dataset.
-33. 
+33. Called the value_counts on the year column of the train dataset to give the total number of counts of each year.
+34. Called the value_counts on the year column of the test dataset to give the total number of counts of each year.
+35. Called the loc function on train data to find the total number of actual fires by setting burn_area to be greater than 0
+36. Found the total of actual fires in train by running the function values_counts
+37. Called the loc function on test data to find the total number of no fires by setting burn_area equal to 0
+38. Found the total of no fires in test by running the function values_counts
 
-
-
+## Feature Engineering And Visualization
+Feature engineering helps the predictive model to predict better. It seeks to establish a relationship between the various columns of the data to facilitate a higher predictive power. The various methods used include:
+1. Created a new column called burnt which determines whether an area gets burnt on not based on the burn_area column which gives the percentage of area burnt. So run a for loop so that if i > 0 then area got burnt hence 1 else 0 for the train dataset.
+2. Showed the first 5 rows by calling the head method of the train dataset.
+3. Created a new column called burnt which determines whether an area gets burnt on not based on the burn_area column which gives the percentage of area burnt. So run a for loop so that if i > 0 then area got burnt hence 1 else 0 for the test dataset.
+4. Showed the first 5 rows by calling the head method of the test dataset.
+5. Showed the last 5 rows by calling the tail method of the test dataset.
+6. Added new columns known as dry_and_windy, hot_and_dry, low_pres_and_rain_def, and pres_def_and_windy using arithmetic operations on some particular columns.
+7. Checked the correlation between the various columns and the target column known as burn_area for train dataset
+8. Showed the first 5 rows by calling the head method on train dataset.
+9. Showed the last 5 rows by calling the head method on train dataset.
+10. Called the shape method on train to see the new number of rows and columns
+11. Called the shape method on test to see the new number of rows and columns
+12. Showed the total counts for each year in train dataset in ascending order.
+13. 
 
 
 
