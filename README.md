@@ -74,7 +74,7 @@ Feature engineering helps the predictive model to predict better. It seeks to es
 
 ## Azure
 1. The new_train data was sent to Microsoft Azure to be used to train the Decision Forest Regression Model.
-2. The new_test was used inferencing after the pipeline of the model was deploy. 
+2. The new_test was used inferencing after the pipeline of the model was deploy.
 
 
 
